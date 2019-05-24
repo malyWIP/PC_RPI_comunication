@@ -2,7 +2,7 @@
 import sys, os, time, shutil
 x1=0
 path = r'D:\STUDIA\Inżynierka\Datasend\file\\'
-moveto = r'D:\STUDIA\Inżynierka\Dash_App\csv_memory\\'
+moveto = r'\\192.168.1.2\homepi\Inzynierka\Dash_App\csv_memory\\'
 
 class DataMove:
 
@@ -24,7 +24,7 @@ class DataMove:
                 dst = moveto + b[6]
                 shutil.move(src, dst)
                 k += 1
-                time.sleep(0.4)
+                time.sleep(0.8)
 
         except FileNotFoundError:
             print('blad')
