@@ -20,8 +20,8 @@ class DataMove:
             while self.state !=False and files.__len__() != k:
                 x = files[k]
                 b = x.split('\\')
-                src = path + b[6]
-                dst = moveto + b[6]
+                src = path + b[3]
+                dst = moveto + b[3]
                 shutil.move(src, dst)
                 k += 1
                 time.sleep(0.8)
