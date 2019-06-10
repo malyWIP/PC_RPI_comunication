@@ -1,8 +1,8 @@
 #!/usr/bin/python
 import sys, os, time, shutil
 x1=0
-path = r'D:\STUDIA\Inżynierka\Datasend\file\\'
-moveto = r'\\192.168.1.2\homepi\Inzynierka\Dash_App\csv_memory\\'
+path = r'C:\maxymos123\\'
+moveto = r'\\192.168.21.50\homepi\csv_memory\\'
 
 class DataMove:
 
@@ -36,7 +36,7 @@ class DataMove:
 
 def File_Change1():
     global x1
-    folder =r'D:\STUDIA\Inżynierka\Datasend\file\\'
+    folder =r'C:\maxymos123\\'
     try:
         x1 = len([os.path.join(folder, f) for f in os.listdir(folder) if f.endswith('.csv')])
         return x1
@@ -53,6 +53,7 @@ if __name__ == '__main__':
         z = File_Change1()
         try:
             if z>0:
+                time.sleep(0.1)
                 process_tester.setState(True)
                 process_tester.move_to_directory(path,moveto)
                 z =0
